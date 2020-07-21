@@ -1,0 +1,84 @@
+/*如置底可用height將svg從上壓小*/
+
+.contain {
+  width: 100%;
+  height: 100vh;
+  background: #c2e59c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #64b3f4,
+    #c2e59c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #64b3f4,
+    #c2e59c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.contain > div {
+  width: 100%;
+  height: 500px;
+  font-size: 60px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body,
+html {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.waves {
+  width: 100%;
+  position: absolute;
+  height: 70vh;
+  bottom: 0;
+}
+.wave-group > use {
+  animation: move-animate 4s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.wave-group > use:nth-child(1) {
+  animation-duration: 5s;
+  animation-delay: -1s;
+}
+.wave-group > use:nth-child(2) {
+  animation-duration: 7s;
+  animation-delay: -2s;
+}
+.wave-group > use:nth-child(3) {
+  animation-duration: 9s;
+  animation-delay: -3s;
+}
+.wave-group > use:nth-child(4) {
+  animation-duration: 8s;
+  animation-delay: -4s;
+}
+
+@keyframes move-animate {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .waves {
+    height: 50vh;
+  }
+  .contain > div {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .waves {
+    height: 30vh;
+  }
+}

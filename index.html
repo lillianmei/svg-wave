@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SVG 波浪特效</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="contain">
+      <div>SVG WAVE</div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 24 150 28"
+        class="waves"
+      >
+        <defs>
+          <path
+            id="wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          ></path>
+        </defs>
+        <g class="wave-group">
+          <use xlink:href="#wave" x="48" y="7" fill="rgba(255,255,255,.5)" />
+          <use xlink:href="#wave" x="48" y="2" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#wave" x="48" y="5" fill="rgba(255,255,255,0.7)" />
+          <use xlink:href="#wave" x="48" y="12" fill="rgba(255,255,255,1)" />
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
